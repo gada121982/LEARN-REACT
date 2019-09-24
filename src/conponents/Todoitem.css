@@ -4,6 +4,7 @@
     font-size: 2rem ; 
     color : #4d4d4d  ; 
     text-align: center;
+    cursor: pointer;
 }
 
 .TodoItem-complete{

@@ -1,16 +1,19 @@
 import React , {Component} from 'react'
 import '../conponents/Todoitem.css';
+import classNames  from 'classnames'
 class TodoItem extends Component{
 
+    
     render(){
-        var className = 'TodoItem' ; 
-        if(this.props.title.complete){
-            className+= ' TodoItem-complete'; 
-        }
+      
+        const {item , onclick} = this.props ; 
+        console.log("this is function onlick " , onclick); 
         return(
-            <div className={className}>
+            <div onClick = {onclick} className={classNames('TodoItem', {
+                'TodoItem-complete' : item.complete === 1 
+            })}>
                 <p>
-                    {this.props.title.title}
+                    {item.title}
                 </p>
             </div>
             

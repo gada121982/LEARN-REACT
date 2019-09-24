@@ -1,23 +1,12 @@
 
 
 
-var object = {
-    
-    c2  : {
-        ten : 'Hai', 
-        age : 20 
-    } , 
-    c3 : {
-        ten : 'Duy', 
-        age : 19.5
-    } 
-}
+var a = [1,3,3] ;
 
 
-const {c3 : c , c2 : c1} = object  ; 
 
-console.log(c1); 
-// c.ten = "Tuan" ; 
+a.forEach((ele , k )=>{
 
-// console.log(c); 
-// console.log(object); 
+    console.log(ele , k ) ; 
+});
+
