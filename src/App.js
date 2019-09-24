@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React , {Component} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import TodoItem from './conponents/my-app' ; 
+
+class App extends Component{
+
+  constructor(){
+
+    super(); 
+    this.TodoItem = [
+      { title:  'Hải dtrai' , complete : 1 } , 
+      { title:  'Hải bảnh trai'} , 
+      { title:  'Hải handsome' } 
+     
+    ]
+
+  }
+
+  render(){
+
+    return(
+      
+        <div className="App">
+        {
+          this.TodoItem.length > 0  && this.TodoItem.map((item , index )=>{
+              return <TodoItem key={index} title={item} />
+            })
+        }
+        {
+          this.TodoItem.length ==0 && 'Nothing here' 
+        }
+        </div>
+       
+      
+  
+    )
+
+    
+  }
+
+
 }
+
 
 export default App;

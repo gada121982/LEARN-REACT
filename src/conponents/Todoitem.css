@@ -1,0 +1,13 @@
+.TodoItem{
+    font-family: 'Courier New', Courier, monospace   ; 
+    font-weight: 700  ; 
+    font-size: 2rem ; 
+    color : #4d4d4d  ; 
+    text-align: center;
+}
+
+.TodoItem-complete{
+
+    text-decoration: line-through ; 
+    opacity: .3;
+}
